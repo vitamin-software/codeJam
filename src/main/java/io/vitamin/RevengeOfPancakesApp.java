@@ -1,7 +1,5 @@
 package io.vitamin;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class RevengeOfPancakesApp extends App{
@@ -26,13 +24,7 @@ public class RevengeOfPancakesApp extends App{
 
     public static void main(String args[]){
         RevengeOfPancakesApp app = new RevengeOfPancakesApp();
-        Scanner in = new Scanner(
-                new BufferedReader(
-                        new InputStreamReader(
-                                RevengeOfPancakesApp.class.getResourceAsStream("/Revenge-small-practice.in")
-                        )
-                ));
-
+        Scanner in = app.createScanner("/Revenge-small-practice.in");
         app.run(in, app::flipper, System.out::println);
     }
 

@@ -1,7 +1,5 @@
 package io.vitamin;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.*;
 
 public class CountingSheepApp extends App {
@@ -45,13 +43,7 @@ public class CountingSheepApp extends App {
 
     public static void main(String args[]){
         CountingSheepApp app = new CountingSheepApp();
-        Scanner in = new Scanner(
-                new BufferedReader(
-                        new InputStreamReader(
-                                RevengeOfPancakesApp.class.getResourceAsStream("/Counting-small-practice.in")
-                        )
-                ));
-
+        Scanner in = app.createScanner("/Counting-small-practice.in");
         app.run(in, app::sleep, System.out::println);
     }
 }
